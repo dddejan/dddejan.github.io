@@ -4,7 +4,7 @@ BSc in Computer Science from the [Faculty of Mathematics](http://www.matf.bg.ac.
 
 ## Contact
 
-Email: sing [dejan.jovanovic@gmail.com](mailto:dejan.jovanovic@gmail.com)
+Email: [dejan.jovanovic@gmail.com](mailto:dejan.jovanovic@gmail.com)
 
 ## News
 
