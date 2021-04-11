@@ -2,6 +2,10 @@
 
 BSc in Computer Science from the [Faculty of Mathematics](http://www.matf.bg.ac.rs/eng/), University of Belgrade in 2003\. PhD at NYU in 2012 ([thesis](papers/jovanovic-thesis.pdf)) under the supervision of [Clark Barrett](http://cs.nyu.edu/~barrett/). My research interests lie in the areas of formal methods, verification, logic, decision procedures, SAT and SMT solvers.
 
+## Contact
+
+Email: sing [dejan.jovanovic@gmail.com](mailto:dejan.jovanovic@gmail.com)
+
 ## News
 
 * Yices2 wins 3 medals at the 2018 FLoC Olympic Games ([slides](http://smtcomp.sourceforge.net/2018/FLoC-2018.pdf))
