@@ -29,6 +29,8 @@ Email: [dejan.jovanovic@gmail.com](mailto:dejan.jovanovic@gmail.com)
 
 Also available at [Google scholar](http://scholar.google.com/citations?user=lWqzpFkAAAAJ).
 
+1. [**Interpolation and Model Checking for Nonlinear Arithmetic**](papers/jovanovic-cav2021.pdf)
+Dejan Jovanović, [Bruno Dutertre](http://www.csl.sri.com/users/bruno/). In _Proceedings of the 33rd Conference on [Computer Aided Verification](http://i-cav.org/2021/)_, 2021\.
 1. [**Solving bitvectors with MCSAT: explanations from bits and pieces**](papers/graham-lengrand-ijcar2020.pdf)  
 [Stéphane Graham-Lengrand](http://www.csl.sri.com/users/sgl/), Dejan Jovanović, [Bruno Dutertre](http://www.csl.sri.com/people/bruno/). In _Proceedings of the 10th [International Joint Conference on Automated Reasoning](https://ijcar2020.org/)_, 2020\.
 2. [**Formal Specification and Verification of Solidity Contracts with Events**](papers/hajdu-fmbc2020.pdf)  
