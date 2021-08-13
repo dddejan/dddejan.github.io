@@ -1,4 +1,4 @@
-## About me
+# Dejan Jovanović
 
 BSc in Computer Science from the [Faculty of Mathematics](http://www.matf.bg.ac.rs/eng/), University of Belgrade in 2003\. PhD at NYU in 2012 ([thesis](papers/jovanovic-thesis.pdf)) under the supervision of [Clark Barrett](http://theory.stanford.edu/~barrett/). I was a computer scientist at the SRI computer science laboratory from 2013 to 2021. I am currently an applied scientist at Amazon Web Services. My research interests lie in the areas of formal methods, verification, logic, decision procedures, SAT and SMT solvers.
 
