@@ -11,9 +11,9 @@ Email: [dejan.jovanovic@gmail.com](mailto:dejan.jovanovic@gmail.com)
 * Yices2 wins 3 medals at the 2018 FLoC Olympic Games ([slides](http://smtcomp.sourceforge.net/2018/FLoC-2018.pdf))
 * Best paper honorable mention for "Property-Directed k-Induction" at [FMCAD 2016](http://www.cs.utexas.edu/users/hunt/FMCAD/FMCAD16/awards.html).
 * Yices2 wins non-linear divisions of [SMT-COMP 2016](http://smtcomp.sourceforge.net/2016/) (QF\_{[NIA](http://smtcomp.sourceforge.net/2016/results-QF_NIA.shtml?v=1467876482),[NRA](http://smtcomp.sourceforge.net/2016/results-QF_NRA.shtml?v=1467876482),[UFNIA](http://smtcomp.sourceforge.net/2016/results-QF_UFNIA.shtml?v=1467876482), [UFNRA](http://smtcomp.sourceforge.net/2016/results-QF_UFNRA.shtml?v=1467876482)}).
-* Talk on SMT at the 2016 edition of the [SAT/SMT/AR summer school](http://ssa-school-2016.it.uu.se/).
-* Co-chair of the [2015 edition of the SMT Workshop](http://smt2015.csl.sri.com/)
-* Talk on MCSAT at the 2015 edition of the [SAT/SMT summer school](http://smt2015.csl.sri.com/school/).
+* Talk on SMT at the 2016 edition of the [SAT/SMT/AR summer school](http://ssa-school-2016.it.uu.se/) ([slides](presentations/jovanovic-smt-summer-school-2016.pdf)).
+* Co-chair of the [2015 edition of the SMT Workshop](http://smt2015.csl.sri.com/) 
+* Talk on MCSAT at the 2015 edition of the [SAT/SMT summer school](http://smt2015.csl.sri.com/school/) ([slides](presentations/jovanovic-smt-summer-school-2015.pdf)).
 * Co-organizer of the [2014 edition of the SAT/SMT summer school](http://satsmt2014.forsyte.at/)
 
 ## Projects
