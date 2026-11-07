@@ -1,2 +1,9 @@
 theme: jekyll-theme-hacker
 title: Dejan Jovanović
+kramdown:
+  input: GFM
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
