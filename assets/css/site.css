@@ -161,7 +161,7 @@ button.current-role:hover { transform: rotate(-.5deg) translateY(-2px); box-shad
 .papers-section .section-content > p:first-child { margin: 0 0 26px; font-size: 12px; color: var(--muted); }
 .publication-tools { margin: 0 0 6px; }
 .publication-controls { display: flex; gap: 12px; align-items: stretch; }
-.search-field { position: relative; flex: 1; }
+.search-field { position: relative; flex: 1; min-width: 0; }
 .search-field svg { position: absolute; top: 15px; left: 14px; color: var(--muted); pointer-events: none; }
 .search-field input { width: 100%; height: 46px; border: 1px solid var(--line); border-radius: 13px; background: #fffdf8; padding: 10px 14px 10px 41px; color: var(--ink); font-size: 13px; }
 .search-field input::placeholder { color: var(--muted); opacity: 1; }
@@ -266,10 +266,10 @@ button.current-role:hover { transform: rotate(-.5deg) translateY(-2px); box-shad
 @media (max-width: 760px) {
   html { scroll-padding-top: 22px; }
   .site-shell { width: calc(100% - 44px); }
-  .site-header { min-height: 87px; align-items: center; }
+  .site-header { min-height: 87px; align-items: center; flex-wrap: wrap; gap: 2px 16px; padding-block: 15px; }
   .wordmark { font-size: 30px; }
   .site-header nav { gap: 19px; }
-  .site-header nav a { font-size: 11px; }
+  .site-header nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; }
   .site-header nav a:first-child, .site-header nav a:nth-child(2) { display: none; }
   .site-header nav a[href$="#projects"] { display: none; }
   .hero { grid-template-columns: 1fr; gap: 0; padding: 49px 0 47px; }
@@ -294,23 +294,25 @@ button.current-role:hover { transform: rotate(-.5deg) translateY(-2px); box-shad
   .section-heading::before { flex: 0 0 32px; width: 32px; height: 32px; margin-bottom: 0; font-size: 22px; }
   .about-section p { font-size: 16px; line-height: 1.85; }
   .about-section p + p { font-size: 14px; }
-  .news-section .section-content > ul > li { padding-left: 0; padding-bottom: 22px; font-size: 13px; }
+  .news-section .section-content > ul > li { padding-left: 0; padding-bottom: 22px; font-size: 14px; }
   .news-section li > strong:first-child { display: block; position: static; width: auto; margin-bottom: 4px; font-size: 9px; }
   .news-archive { margin-top: 10px; font-size: 12px; }
   .projects-section .section-content > ul { column-gap: 12px; row-gap: 12px; }
   .projects-section li { padding: 16px; border-radius: 14px; }
-  .projects-section li { font-size: 12px; }
+  .projects-section li { font-size: 13px; }
   .projects-section li > a:first-of-type { font-size: 16px; }
-  .papers-section ol > li > a:first-of-type { font-size: 16px; }
-  .papers-section ol > li { font-size: 11px; }
+  .papers-section ol > li > a:first-of-type { font-size: 17px; }
+  .papers-section ol > li { font-size: 13px; }
   .publications-ready > li { padding-left: 0 !important; padding-top: 47px; }
   .publication-year { top: 23px; font-size: 9px; }
   .publication-controls { gap: 8px; }
-  .publication-controls select { width: 105px; font-size: 11px; }
-  .search-field input { font-size: 12px; }
+  .publication-controls select { flex: 0 0 124px; width: 124px; font-size: 16px; }
+  .search-field input { font-size: 16px; }
+  .publication-pdf { display: inline-flex; align-items: center; justify-content: center; min-width: 60px; min-height: 44px; font-size: 11px; }
   .contact-section .contact-invitation { font-size: 34px; }
   .contact-section .contact-email { font-size: 16px; }
   .contact-links { gap: 12px 20px; }
+  .contact-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
   .site-footer { flex-wrap: wrap; font-size: 9px; padding-block: 22px; gap: 12px; }
   .site-footer > span { order: 3; width: 100%; }
   .writing-page { padding: 35px 0 55px; }
