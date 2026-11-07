@@ -303,8 +303,8 @@ button.current-role:hover { transform: rotate(-.5deg) translateY(-2px); box-shad
   .projects-section li > a:first-of-type { font-size: 16px; }
   .papers-section ol > li > a:first-of-type { font-size: 17px; }
   .papers-section ol > li { font-size: 13px; }
-  .publications-ready > li { padding-left: 0 !important; padding-top: 47px; }
-  .publication-year { top: 23px; font-size: 9px; }
+  .publications-ready > li { padding-left: 0 !important; padding-top: 25px; }
+  .publication-year { position: static; display: block; width: fit-content; margin-bottom: 11px; padding: 3px 9px; border-radius: 50px; background: #dfedf2; color: #37667b; font-size: 11px; font-weight: 500; line-height: 1.5; }
   .publication-controls { gap: 8px; }
   .publication-controls select { flex: 0 0 124px; width: 124px; font-size: 16px; }
   .search-field input { font-size: 16px; }
