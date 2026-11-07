@@ -1,5 +1,16 @@
 theme: jekyll-theme-hacker
 title: Dejan Jovanović
+description: "A personal corner of the web for logic, software, AI, and writing."
+url: https://dddejan.github.io
+permalink: /blog/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      section: writing
+      author: Dejan Jovanović
 kramdown:
   input: GFM
 exclude:

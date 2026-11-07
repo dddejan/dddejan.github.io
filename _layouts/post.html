@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <a class="quiet-link" href="{{ '/blog/' | relative_url }}">← All writing</a>
+    <p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="post-description">{{ page.description | escape }}</p>{% endif %}
+    <p class="post-byline">{{ page.author | default: site.title | escape }}</p>
+  </header>
+  <div class="post-body">{{ content }}</div>
+  <footer class="post-footer">
+    <p>Thoughts, questions, or a different way of looking at it?</p>
+    <a href="mailto:dejan.jovanovic@gmail.com">Drop me a note <span aria-hidden="true">↗</span></a>
+  </footer>
+</article>

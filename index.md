@@ -1,23 +1,49 @@
-## About me
+---
+layout: default
+home: true
+---
 
-I am a member of technical staff at [Axiom Math](https://axiommath.ai/), which I joined in September 2026. My research focuses on automated reasoning, formal verification, logic, decision procedures, SAT and SMT solvers, and their interaction with AI.
+<section class="content-section about-section" id="about-me" aria-labelledby="about-heading" markdown="1">
+<h2 class="section-heading" id="about-heading">About</h2>
+<div class="section-content" markdown="1">
+
+My research focuses on automated reasoning, formal verification, logic, decision procedures, SAT and SMT solvers, and their interaction with AI.
 
 Previously, I was an Applied Scientist at AWS (2021–2026) and a computer scientist at SRI International's Computer Science Laboratory (2013–2021). I received my PhD in Computer Science from NYU in 2012 ([thesis](papers/jovanovic-thesis.pdf)), advised by [Clark Barrett](https://theory.stanford.edu/~barrett/), and my BSc in Computer Science from the Faculty of Mathematics, University of Belgrade, in 2003.
 
-## Contact
+</div>
+</section>
 
-Email: [dejan.jovanovic@gmail.com](mailto:dejan.jovanovic@gmail.com)<br>
-[GitHub](https://github.com/dddejan) · [Google Scholar](https://scholar.google.com/citations?user=lWqzpFkAAAAJ) · [LinkedIn](https://www.linkedin.com/in/dejanjovanovic/) · [Twitter / X](https://x.com/dddejan)
+{% if site.posts.size > 0 %}
+<section class="content-section writing-section" id="writing" aria-labelledby="writing-heading" markdown="1">
+<h2 class="section-heading" id="writing-heading">Writing</h2>
+<div class="section-content">
+  <ul class="writing-list">
+    {% for post in site.posts limit:3 %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }} <span aria-hidden="true">↗</span></a></h3>
+      {% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <a class="quiet-link" href="{{ '/blog/' | relative_url }}">All writing ↗</a>
+</div>
+</section>
+{% endif %}
 
-## News
+<section class="content-section news-section" id="news" aria-labelledby="news-heading" markdown="1">
+<h2 class="section-heading" id="news-heading">Lately</h2>
+<div class="section-content" markdown="1">
 
-* **October 2026:** New preprint: [Scaling Lean Theorem Proving for Real-World Code Verification](papers/ganguly-arxiv2026.pdf), introducing EasyProver and the Aegis verification benchmark.
-* **September 2026:** I joined [Axiom Math](https://axiommath.ai/).
-* **2026:** Our paper [A Neurosymbolic Approach to Natural Language Formalization and Verification](https://www.amazon.science/publications/a-neurosymbolic-approach-to-natural-language-formalization-and-verification) appeared at CAV 2026.
-* **May 2026:** New preprint: [Nonlinear Arithmetic with SMTLIB Division is Undecidable](papers/jovanovic-arxiv2026.pdf).
-* **2024:** Our paper [Projective Model Counting for IP Addresses in Access Control Policies](https://www.amazon.science/publications/projective-model-counting-for-ip-addresses-in-access-control-policies) appeared at FMCAD 2024.
+* **October 2026** New preprint: [Scaling Lean Theorem Proving for Real-World Code Verification](papers/ganguly-arxiv2026.pdf), introducing EasyProver and the Aegis verification benchmark.
+* **September 2026** I joined [Axiom Math](https://axiommath.ai/).
+* **2026** Our paper [A Neurosymbolic Approach to Natural Language Formalization and Verification](https://www.amazon.science/publications/a-neurosymbolic-approach-to-natural-language-formalization-and-verification) appeared at CAV 2026.
+* **May 2026** New preprint: [Nonlinear Arithmetic with SMTLIB Division is Undecidable](papers/jovanovic-arxiv2026.pdf).
+* **2024** Our paper [Projective Model Counting for IP Addresses in Access Control Policies](https://www.amazon.science/publications/projective-model-counting-for-ip-addresses-in-access-control-policies) appeared at FMCAD 2024.
 
-### Earlier news
+<details class="news-archive" markdown="1">
+<summary>Earlier news &amp; highlights</summary>
 
 * Yices2 wins 3 medals at the 2018 FLoC Olympic Games ([slides](http://smtcomp.sourceforge.net/2018/FLoC-2018.pdf))
 * Best paper honorable mention for "Property-Directed k-Induction" at [FMCAD 2016](http://www.cs.utexas.edu/users/hunt/FMCAD/FMCAD16/awards.html).
@@ -27,20 +53,53 @@ Email: [dejan.jovanovic@gmail.com](mailto:dejan.jovanovic@gmail.com)<br>
 * Talk on MCSAT at the 2015 edition of the [SAT/SMT summer school](http://smt2015.csl.sri.com/school/) ([slides](presentations/jovanovic-smt-summer-school-2015.pdf)).
 * Co-organizer of the [2014 edition of the SAT/SMT summer school](http://satsmt2014.forsyte.at/)
 
-## Projects
+</details>
 
-* [Automated Reasoning checks](https://www.amazon.science/publications/a-neurosymbolic-approach-to-natural-language-formalization-and-verification): Formalization of natural-language policies and verification of answers in Amazon Bedrock Guardrails.
-* [Zelkova](https://www.amazon.science/publications/projective-model-counting-for-ip-addresses-in-access-control-policies): Automated reasoning about AWS access-control policies.
-* [solc-verify](https://github.com/SRI-CSL/solidity/): A Modular Verifier for Solidity Smart Contracts.
-* [Sally](https://github.com/SRI-CSL/sally/): A model-checker for infinite-state systems.
-* [LibPoly](https://github.com/SRI-CSL/libpoly): A library for advanced polynomial operations.
-* [Yices](https://yices.csl.sri.com/): SMT solver from SRI.
-* [CVC4](https://cvc4.github.io/): An SMT solver, succeeded by [cvc5](https://cvc5.github.io/).
-* [cutsat](http://www.cs.nyu.edu/~dejan/cutsat/): A linear integer arithmetic solver.
+</div>
+</section>
 
-## Papers
+<section class="content-section projects-section" id="projects" aria-labelledby="projects-heading" markdown="1">
+<h2 class="section-heading" id="projects-heading">Projects</h2>
+<div class="section-content" markdown="1">
+
+* <img class="project-mark" src="{{ '/assets/projects/arc.svg' | relative_url }}" alt="" width="40" height="40" loading="lazy"> [Automated Reasoning checks](https://www.amazon.science/publications/a-neurosymbolic-approach-to-natural-language-formalization-and-verification)
+  Formalization of natural-language policies and verification of answers in Amazon Bedrock Guardrails.
+* <img class="project-mark" src="{{ '/assets/projects/zelkova.svg' | relative_url }}" alt="" width="40" height="40" loading="lazy"> [Zelkova](https://www.amazon.science/publications/projective-model-counting-for-ip-addresses-in-access-control-policies)
+  Automated reasoning about AWS access-control policies.
+* <img class="project-mark" src="{{ '/assets/projects/solc-verify.svg' | relative_url }}" alt="" width="40" height="40" loading="lazy"> [solc-verify](https://github.com/SRI-CSL/solidity/)
+  A Modular Verifier for Solidity Smart Contracts.
+* <img class="project-mark" src="{{ '/assets/projects/sally.svg' | relative_url }}" alt="" width="40" height="40" loading="lazy"> [Sally](https://github.com/SRI-CSL/sally/)
+  A model-checker for infinite-state systems.
+* <img class="project-mark" src="{{ '/assets/projects/libpoly.svg' | relative_url }}" alt="" width="40" height="40" loading="lazy"> [LibPoly](https://github.com/SRI-CSL/libpoly)
+  A library for advanced polynomial operations.
+* <img class="project-mark" src="{{ '/assets/projects/yices.svg' | relative_url }}" alt="" width="40" height="40" loading="lazy"> [Yices](https://yices.csl.sri.com/)
+  SMT solver from SRI.
+* <img class="project-mark" src="{{ '/assets/projects/cvc4.svg' | relative_url }}" alt="" width="40" height="40" loading="lazy"> [CVC4](https://cvc4.github.io/)
+  An SMT solver, succeeded by [cvc5](https://cvc5.github.io/).
+* <img class="project-mark" src="{{ '/assets/projects/cutsat.svg' | relative_url }}" alt="" width="40" height="40" loading="lazy"> [cutsat](http://www.cs.nyu.edu/~dejan/cutsat/)
+  A linear integer arithmetic solver.
+
+</div>
+</section>
+
+<section class="content-section papers-section" id="papers" aria-labelledby="papers-heading" markdown="1">
+<h2 class="section-heading" id="papers-heading">Publications</h2>
+<div class="section-content" markdown="1">
 
 Also available on [Google Scholar](https://scholar.google.com/citations?user=lWqzpFkAAAAJ).
+
+<form class="publication-tools" role="search" aria-label="Search publications" hidden>
+  <div class="publication-controls">
+    <div class="search-field">
+      <label class="sr-only" for="publication-search">Search titles, authors, and keywords</label>
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.75" stroke="currentColor" stroke-width="1.4"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <input id="publication-search" type="search" placeholder="Title, author, or keyword" autocomplete="off" spellcheck="false">
+    </div>
+    <label class="sr-only" for="publication-year">Filter publications by year</label>
+    <select id="publication-year"><option value="">All years</option></select>
+  </div>
+  <p id="publication-count" class="publication-count" role="status" aria-live="polite" aria-atomic="true"></p>
+</form>
 
 1. [**Scaling Lean Theorem Proving for Real-World Code Verification**](papers/ganguly-arxiv2026.pdf)<br>
 Debargha Ganguly, Divya Raghunathan, Dejan Jovanović, Vikash Singh, Soonho Kong, Aaron Tomb, Aman Goel, Ferhat Erata, Sam Bayless. Preprint, [arXiv:2610.38174](https://arxiv.org/abs/2610.38174), 2026.
@@ -114,3 +173,24 @@ Dejan Jovanović and [Clark Barrett](https://theory.stanford.edu/~barrett/). Tec
 Dejan Jovanović and [Predrag Janičić](https://poincare.matf.bg.ac.rs/~janicic/). In Proceedings of the 5th International Workshop [_Frontiers of Combining Systems_](http://www.logic.at/frocos05/), volume 3717 of _Lecture Notes in Computer Science_, pages 200-215\. Springer-Verlag, 2005\.
 1. [**Variable Neighborhood Search for the Probabilistic Satisfiability Problem**](papers/jovanovic-vns4psat-2005.pdf)<br>
 Dejan Jovanović, [Nenad Mladenović](https://www.ae-info.org/ae/Member/Mladenovic_Nenad), and [Zoran Ognjanović](https://www.mi.sanu.ac.rs/~zorano/). In _Proceedings of the 6th Metaheuristics International Conference_, 2005\.
+
+<p id="no-publications" class="no-publications" hidden>No publications match. Try another keyword or year.</p>
+
+</div>
+</section>
+
+<section class="content-section contact-section" id="contact" aria-labelledby="contact-heading" markdown="1">
+<h2 class="section-heading" id="contact-heading">Get in touch</h2>
+<div class="section-content" markdown="1">
+
+<p class="contact-invitation">Always happy to connect.</p>
+<a class="contact-email" href="mailto:dejan.jovanovic@gmail.com">dejan.jovanovic@gmail.com</a>
+<div class="contact-links">
+  <a href="https://github.com/dddejan">GitHub</a>
+  <a href="https://scholar.google.com/citations?user=lWqzpFkAAAAJ">Google Scholar</a>
+  <a href="https://www.linkedin.com/in/dejanjovanovic/">LinkedIn</a>
+  <a href="https://x.com/dddejan">Twitter / X</a>
+</div>
+
+</div>
+</section>

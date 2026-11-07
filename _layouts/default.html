@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta name="twitter:card" content="summary">
+    <link rel="preload" href="{{ '/assets/fonts/dm-sans-normal-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/bricolage-grotesque-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }} — Writing" href="{{ '/feed.xml' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Dejan Jovanović, home">dejan<span aria-hidden="true">.</span></a>
+        <nav aria-label="Main navigation">
+          <a href="{{ '/' | relative_url }}#about-me">About</a>
+          <a href="{{ '/' | relative_url }}#news">News</a>
+          <a href="{{ '/' | relative_url }}#projects">Projects</a>
+          <a href="{{ '/' | relative_url }}#papers">Publications</a>
+          {% if site.posts.size > 0 %}<a href="{{ '/blog/' | relative_url }}"{% if page.section == 'writing' %} aria-current="page"{% endif %}>Writing</a>{% endif %}
+          <a href="{{ '/' | relative_url }}#contact">Contact <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main id="main">
+        {% if page.home %}
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Dejan Jovanović</p>
+            <h1 id="hero-title"><span class="hero-hello">Hi, I’m</span><br><span class="hero-name">Dejan<span class="name-period">.</span></span></h1>
+            <p class="hero-description">I work on logic, software, and AI—and how they fit together. This is where I share what I’m working on.</p>
+            <a class="text-link hero-link" href="#about-me">Have a look around <span aria-hidden="true">↘</span></a>
+          </div>
+
+          <div class="hero-aside">
+            <div class="proof-art" aria-hidden="true">
+              <svg viewBox="0 0 360 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="proof-grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.65" fill="currentColor" opacity=".2"/></pattern>
+                </defs>
+                <rect width="360" height="300" fill="url(#proof-grid)"/>
+                <path d="M27 54q6-16 21-6m260 174q17-4 20-19M43 240l9 3m-5-8-2 11M310 45l10 3m-3-8-3 11" stroke="#c4583e" stroke-width="2" stroke-linecap="round"/>
+                <path d="M58 86Q82 80 100 86Q150 108 180 150M302 86Q280 81 260 86Q214 109 180 150M180 150Q173 190 180 236" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M100 86V42M260 86V42M100 86L58 164M260 86L302 164M180 150L112 230M180 150L248 230" stroke="currentColor" stroke-opacity=".16"/>
+                <circle cx="100" cy="86" r="26" class="art-node"/>
+                <circle cx="260" cy="86" r="26" class="art-node art-node--yellow"/>
+                <circle cx="180" cy="150" r="24" class="art-node art-node--filled"/>
+                <circle cx="180" cy="236" r="26" class="art-node art-node--blue"/>
+                <circle cx="58" cy="164" r="4" fill="currentColor" opacity=".2"/>
+                <circle cx="302" cy="164" r="4" fill="currentColor" opacity=".2"/>
+                <circle cx="112" cy="230" r="4" fill="currentColor" opacity=".2"/>
+                <circle cx="248" cy="230" r="4" fill="currentColor" opacity=".2"/>
+                <circle cx="100" cy="42" r="3" fill="currentColor" opacity=".2"/>
+                <circle cx="260" cy="42" r="3" fill="currentColor" opacity=".2"/>
+                <g text-anchor="middle" dominant-baseline="central" class="art-symbols">
+                  <text x="100" y="84">φ</text><text x="260" y="84" class="art-implication">φ → ψ</text>
+                  <text x="180" y="149" class="art-turnstile">⊢</text><text x="180" y="234">ψ</text>
+                </g>
+              </svg>
+              <span class="art-caption">a little modus ponens</span>
+            </div>
+            {% assign current_role = site.data.career.first %}
+            <div class="calendar-shell">
+              <button class="current-role" id="career-calendar" type="button" aria-label="Currently at Axiom Math. Turn the page to AWS." hidden>
+                <span class="calendar-binding" aria-hidden="true"><i></i><i></i></span>
+                <span class="calendar-face">
+                  <span class="eyebrow" data-career="label">{{ current_role.label }}</span>
+                  <span class="calendar-company" data-career="company">{{ current_role.company }}</span>
+                  <span class="calendar-job" data-career="role">{{ current_role.role }}</span>
+                  <span class="calendar-period" data-career="period">{{ current_role.period }}</span>
+                </span>
+                <span class="calendar-bottom" aria-hidden="true"><span class="calendar-cue">Before that ↶</span><span class="calendar-dots"><i class="active"></i><i></i><i></i></span></span>
+              </button>
+              <noscript><div class="current-role"><span class="eyebrow">{{ current_role.label }}</span><span class="calendar-company">{{ current_role.company }}</span><p>{{ current_role.role }}<br>{{ current_role.period }}</p></div></noscript>
+              <span id="career-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+            </div>
+            <script id="career-data" type="application/json">{{ site.data.career | jsonify }}</script>
+          </div>
+        </section>
+        {% endif %}
+
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <a href="{{ '/' | relative_url }}">Dejan Jovanović</a>
+        <span>Logic, software, and a little curiosity.</span>
+        <a href="#main" class="back-to-top">Back to top <span aria-hidden="true">↑</span></a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+---
+layout: default
+title: Writing
+section: writing
+description: "Notes and longer thoughts from Dejan Jovanović on logic, software, and AI."
+---
+<section class="writing-page" aria-labelledby="writing-title">
+  <header class="writing-header">
+    <span class="writing-mark" aria-hidden="true">✎</span>
+    <h1 id="writing-title">From the notebook<span>.</span></h1>
+    <p>Notes, ideas, and things worth thinking through.</p>
+  </header>
+  {% if site.posts.size > 0 %}
+  <ul class="writing-list">
+    {% for post in site.posts %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }} <span aria-hidden="true">↗</span></a></h2>
+      {% if post.description %}<p>{{ post.description | escape }}</p>{% else %}{{ post.excerpt | strip_html | truncatewords: 35 | escape | prepend: '<p>' | append: '</p>' }}{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <a class="quiet-link" href="{{ '/feed.xml' | relative_url }}">Follow along via RSS ↗</a>
+  {% else %}
+  <p class="writing-empty">The notebook is open. First post to come.</p>
+  <a class="quiet-link" href="{{ '/' | relative_url }}">← Back home</a>
+  {% endif %}
+</section>
