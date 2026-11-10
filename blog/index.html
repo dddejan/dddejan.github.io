@@ -15,12 +15,12 @@ description: "Notes and longer thoughts from Dejan Jovanović on logic, software
     {% for post in site.posts %}
     <li>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }} <span aria-hidden="true">↗</span></a></h2>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
       {% if post.description %}<p>{{ post.description | escape }}</p>{% else %}{{ post.excerpt | strip_html | truncatewords: 35 | escape | prepend: '<p>' | append: '</p>' }}{% endif %}
     </li>
     {% endfor %}
   </ul>
-  <a class="quiet-link" href="{{ '/feed.xml' | relative_url }}">Follow along via RSS ↗</a>
+  <a class="quiet-link" href="{{ '/feed.xml' | relative_url }}">Follow along via RSS</a>
   {% else %}
   <p class="writing-empty">The notebook is open. First post to come.</p>
   <a class="quiet-link" href="{{ '/' | relative_url }}">← Back home</a>

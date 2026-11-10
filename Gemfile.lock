@@ -48,11 +48,6 @@ GEM
       jekyll (>= 3.0, < 5.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
-    jekyll-seo-tag (2.9.1)
-      jekyll (>= 3.8, < 5.0)
-    jekyll-theme-hacker (0.2.0)
-      jekyll (> 3.5, < 5.0)
-      jekyll-seo-tag (~> 2.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.5.2)
@@ -101,7 +96,6 @@ DEPENDENCIES
   jekyll (~> 3.10)
   jekyll-default-layout (~> 0.1)
   jekyll-optional-front-matter (~> 0.3)
-  jekyll-theme-hacker (~> 0.2)
   kramdown-parser-gfm (~> 1.1)
   webrick (~> 1.9)
 
@@ -132,8 +126,6 @@ CHECKSUMS
   jekyll-default-layout (0.2.1) sha256=358af41f82ce8da7abcdec820831afaea990f1a31eda8c5e6b393b4e1a2485fd
   jekyll-optional-front-matter (0.3.5) sha256=10ee0a3e3383c1eb51af67c928a5e4c93c3db8d7c0c984e33b1010d4d768ecb1
   jekyll-sass-converter (1.5.2) sha256=53773669e414dc3bb070113befacb808576025a28cfa4a4accc682e90a9c1101
-  jekyll-seo-tag (2.9.1) sha256=ed5c757a091048b6ef9109f856f84a29beaeb70f531ba5775a5e92129a28093e
-  jekyll-theme-hacker (0.2.0) sha256=816bf9f992ded0b1e1e69d8dece2574e8480efb5e9f84a2e1ac83bd717b8f78a
   jekyll-watch (2.2.1) sha256=bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1
   kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
   kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
