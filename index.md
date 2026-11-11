@@ -9,7 +9,7 @@ home: true
 
 My research focuses on automated reasoning, formal verification, logic, decision procedures, SAT and SMT solvers, and their interaction with AI.
 
-I am a member of technical staff at [Axiom Math](https://axiommath.ai/), working on AI for mathematics. Previously, I was an Applied Scientist at AWS (2021–2026) and a computer scientist at SRI International's Computer Science Laboratory (2013–2021). I received my PhD in Computer Science from NYU in 2012 ([thesis](papers/jovanovic-thesis.pdf)), advised by [Clark Barrett](https://theory.stanford.edu/~barrett/), and my BSc in Computer Science from the Faculty of Mathematics, University of Belgrade, in 2003.
+I am a member of technical staff at [Axiom Math](https://axiommath.ai/), where I work on verification and automated reasoning toward our mission to formalize and prove everything. Previously, I was an Applied Scientist at AWS (2021–2026) and a computer scientist at SRI International's Computer Science Laboratory (2013–2021). I received my PhD in Computer Science from NYU in 2012 ([thesis](papers/jovanovic-thesis.pdf)), advised by [Clark Barrett](https://theory.stanford.edu/~barrett/), and my BSc in Computer Science from the Faculty of Mathematics, University of Belgrade, in 2003.
 
 </div>
 </section>
