@@ -182,6 +182,12 @@ button.current-role:hover { transform: rotate(-.5deg) translateY(-2px); box-shad
 .publication-year { position: absolute; left: 0; top: 30px; color: var(--accent); font-family: var(--mono); font-size: 10px; }
 .publication-pdf { display: inline-block; border: 1px solid var(--line); border-radius: 50px; padding: 3px 8px; margin: 9px 0 0; font-family: var(--mono); font-size: 9px; line-height: 1.9; text-decoration: none !important; color: var(--accent); }
 .publication-pdf:hover { border-color: var(--accent); background: var(--soft-accent); }
+.publication-tag-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+.publication-tag { border: 1px solid var(--line); border-radius: 50px; background: transparent; padding: 3px 9px; font-family: var(--mono); font-size: 9px; line-height: 1.9; color: var(--muted); cursor: pointer; }
+.publication-tag:hover { border-color: var(--accent); color: var(--accent); }
+.publication-tag[aria-pressed="true"], .publication-tag.is-active { border-color: var(--accent); background: var(--soft-accent); color: var(--accent); }
+.publication-tag-count { opacity: .6; margin-left: 2px; }
+.publication-tag-list { display: inline-flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 0 6px; vertical-align: top; }
 .no-publications { padding: 35px 0 0; font-size: 14px; color: var(--muted); }
 .contact-section { padding-block: 58px 68px; }
 .contact-section .contact-invitation { font-family: "Bricolage Grotesque", sans-serif; font-size: 37px; font-weight: 450; letter-spacing: -.9px; line-height: 1.15; color: var(--ink); margin: -5px 0 23px; }
@@ -308,6 +314,9 @@ button.current-role:hover { transform: rotate(-.5deg) translateY(-2px); box-shad
   .publication-controls { gap: 8px; }
   .publication-controls select { flex: 0 0 124px; width: 124px; font-size: 16px; }
   .search-field input { font-size: 16px; }
+  .publication-tag-filter { gap: 8px; }
+  .publication-tag { min-height: 36px; padding: 6px 12px; font-size: 11px; }
+  .publication-tag-list { gap: 8px; }
   .publication-pdf { display: inline-flex; align-items: center; justify-content: center; min-width: 60px; min-height: 44px; font-size: 11px; }
   .contact-section .contact-invitation { font-size: 34px; }
   .contact-section .contact-email { font-size: 16px; }
@@ -340,7 +349,7 @@ button.current-role:hover { transform: rotate(-.5deg) translateY(-2px); box-shad
 @media print {
   body { background: white; font-size: 10pt; }
   .site-shell { width: 100%; }
-  .site-header nav, .hero-aside, .publication-tools, .publication-pdf, .back-to-top, .proof-art { display: none !important; }
+  .site-header nav, .hero-aside, .publication-tools, .publication-pdf, .publication-tag-list, .back-to-top, .proof-art { display: none !important; }
   .hero { display: block; padding: 20px 0; }
   h1 { font-size: 42pt; line-height: 1; }
   h1 br { display: none; }
